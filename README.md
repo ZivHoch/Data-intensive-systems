@@ -71,12 +71,12 @@ Ensure you have the following software installed with the specified versions:
 3. **Part 1 Analysis:**
 - Open `Part1.ipynb`.
 - This notebook uses shingles and MinHash LSH to identify similar pairs.
-- The output files are generated in `output/part1Observations.txt` and `output/part1Output.txt`.
+- The current output files are generated in `output/part1Observations.txt` and `output/part1Output.txt`.
 
 4. **Part 2 Analysis:**
 - Open `Part2.ipynb`.
 - This notebook uses server names instead of shingles and identifies less similar pairs using MinHash LSH.
-- The output file is generated in `output/part2Observations.txt`.
+- The current output file is generated in `output/part2Observations.txt`.
 
 ## Documentation
 - **Report:**
