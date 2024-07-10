@@ -1,6 +1,26 @@
-## Data-intensive-systems
+# Data-intensive-systems
 
 This project analyzes network logs using Apache Spark, Hadoop, and Python. The analysis is split into two main parts, both utilizing MinHash and LSH techniques to find similarities and dissimilarities in network logs.
+
+## Overview
+
+In this system, a server receives a service request either from a user or another server and responds with a service response. The duration of a service task is the time elapsed between receiving the request and sending the response. Importantly, we disregard network delays for simplicity in modeling.
+
+### Example Scenario
+
+Consider a scenario where Server S1 receives a request to purchase a book (X) from a user at time t0. Server S1, realizing the need for a credit check, sends a request to Server S2 at time t1. Meanwhile, at time t3, Server S1 receives another request to buy another book (Y). It further requests an ID check from Server S3 at time t4. Subsequently, Server S1 receives a response from Server S2 at time t5 and responds to the initial book purchase request at time t6. Finally, Server S1 receives a response from Server S3 at time t7.
+
+### Log File Analysis
+
+The system logs each request and response exchange between servers in the following format:
+
+```<FromServer, ToServer, time, action (Request or Response), processId >```
+
+### Goals
+
+1. **Identify Variations**: The first goal is to identify variations in processes recorded in the log file. A unified representation should represent Processes exhibiting similar characteristics to simplify analysis.
+2. **Group Similar Processes**: The second goal involves grouping processes that share some similarities but are distinct enough to warrant separate representations.
+
 
 ## Prerequisites
 
@@ -68,7 +88,7 @@ Ensure you have the following software installed with the specified versions:
 - All test data used in this project can be found in the `Data` folder.
 
 ## Project Structure
-
+```scss
 Data-intensive-systems/
 ├── Data/
 │   └── ... (test data files)
@@ -86,5 +106,6 @@ Data-intensive-systems/
 │   └── Part2.ipynb
 ├── start_spark_cluster.bat
 └── README.md
+```
 
 
