@@ -51,7 +51,7 @@ Ensure you have the following software installed with the specified versions:
 4. **Run the Spark standalone application:**
 -  Use the provided batch script to create the Master and Workers:
   ```sh
-  ./start_spark_clusters.bat
+  ./start_spark_cluster.bat
   ```
 - You can edit this file to adjust the number of workers, the amount of RAM and the number of cores per worker, and the allocated RAM and cores for the master.
 
